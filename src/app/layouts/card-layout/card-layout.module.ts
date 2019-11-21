@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClipboardModule } from 'ngx-clipboard';
 
 import { CardLayoutRoutes } from './card-layout.routing';
+import { WelcomeComponent } from '../../pages/welcome/welcome.component';
 import { CardComponent } from '../../pages/card/card.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { ToastrModule } from 'ngx-toastr';
@@ -20,6 +21,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ClipboardModule
   ],
   declarations: [
+    WelcomeComponent,
     CardComponent,
   ]
 })

@@ -8,7 +8,7 @@ import { CardLayoutComponent } from './layouts/card-layout/card-layout.component
 const routes: Routes =[
   {
     path: '',
-    redirectTo: 'card',
+    redirectTo: 'welcome',
     pathMatch: 'full',
   }, {
     path: '',
@@ -21,7 +21,7 @@ const routes: Routes =[
     ]
   }, {
     path: '**',
-    redirectTo: 'card'
+    redirectTo: 'welcome'
   }
 ];
 

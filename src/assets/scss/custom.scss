@@ -1,4 +1,4 @@
-$card-container-width: 568px;
+$card-container-width: 600px;
 
 .navbar-expand-md {
     padding-left: 0 !important;
@@ -22,10 +22,17 @@ $card-container-width: 568px;
     background-attachment: fixed;
 }
 
-.card-form-bg {
-    min-height: 300px; 
+.card-welcome-header, .card-welcome-header {
     background-size: cover; 
     background-position: center top;
+}
+
+.card-welcome-header {
+    min-height: 300px;
+}
+
+.card-form-bg {
+    min-height: 200px; 
 }
 
 @media screen and (min-width: 568px) {
@@ -33,7 +40,11 @@ $card-container-width: 568px;
         height: 100%;
     }
 
+    .card-welcome-header {
+        min-height: 360px;
+    }
+
     .card-form-bg {
-        min-height: 600px;
+        min-height: 100px;
     }
 }
