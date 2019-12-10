@@ -6,19 +6,21 @@
     <div class="row mb-4 mt-2">
       <div class="col-lg-12">
         <a class="navbar-brand">
-            <img src="./assets/img/brand/argon-white.png" class="navbar-brand-img" alt="...">
+          <img src="./assets/img/brand/argon-white.png" class="navbar-brand-img" alt="...">
         </a>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-12 pl-4 pr-4">
         <h1 class="display-4 text-white">Olá Jonas,</h1>
-        <p class="text-white mt-3 mb-4">Você está adquirindo o plano <b>premium</b> do <b>Windows XP</b>, oferecido por <b>Microsoft Inc</b>.</p>
+        <p class="text-white mt-3 mb-4">Você está adquirindo o plano <b>premium</b> do <b>Windows XP</b>, oferecido por
+          <b>Microsoft Inc</b>.</p>
       </div>
     </div>
   </div>
 </div>
-<div class="container-fluid mt--7">
+
+<div class="container-fluid mt--7" *ngIf="logged">
   <div class="row">
     <div class="col-xl-12">
       <div class="card bg-secondary shadow">
@@ -40,8 +42,10 @@
           <div class="row">
             <div class="col-12 mb-2">
               <ul>
-                <li class="text-muted small">Para sua comodidade, será debitado mensalmente o valor de <b><small>R$</small> 400</b> de seu cartão, de forma automática</li>
-                <li class="text-muted small">Ao clicar em "Preencher informações", você está concordando com os termos descritos</li>
+                <li class="small mb-2">Para sua comodidade, será debitado mensalmente o valor de
+                  <b><small>R$</small> 400</b> de seu cartão, de forma automática</li>
+                <li class="small mb-2">Ao clicar em <i>Preencher informações</i>, você está concordando com os termos descritos</li>
+                <li class="small">O valor será apresentado na sua fatura com o nome <i>RECORR PAGAMENTOS</i></li>
               </ul>
             </div>
           </div>
@@ -49,8 +53,10 @@
           <div class="row">
             <div class="col-12 mb-4">
               <ul>
-                <li class="text-muted small">Para sua comodidade, será debitado mensalmente o valor de <b><small>R$</small> 400</b> de seu cartão, de forma automática</li>
-                <li class="text-muted small">Ao clicar em "Preencher informações", você está concordando com os termos descritos</li>
+                <li class="small mb-2">Para sua comodidade, será debitado mensalmente o valor de
+                  <b><small>R$</small> 400</b> de seu cartão, de forma automática</li>
+                <li class="small">Ao clicar em "Preencher informações", você está concordando com os termos
+                  descritos</li>
               </ul>
             </div>
           </div>
@@ -60,6 +66,50 @@
                 <span class="btn-inner--icon"><i class="ni ni-check-bold"></i></span>
                 <span class="btn-inner--text">Preencher informações</span>
               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt--7" *ngIf="!logged">
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="card bg-secondary shadow">
+        <div class="card-header bg-white border-0">
+          <div class="row align-items-center">
+            <div class="col-5 col-md-7">
+              <h3 class="mb-0">Bem vindo</h3>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h6 class="heading-small text-muted mb-4">Verificação de identidade</h6>
+          <div class="pl-lg-4">
+            <div class="row mb-3">
+                <div class="col-lg-11">
+                  <p class="small">Para garantirmos sua segurança, por favor digite seu telefone no campo abaixo e clique em <i>Verificar telefone</i></p>
+                  <p class="small mt-4"><b>+55 (11) ••••• 8169</b></p>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-11 mb-4">
+                <div class="form-group">
+                  <label class="form-control-label" for="input-phone">Telefone</label>
+                  <input type="tel" [(ngModel)]="phone" id="input-phone" class="form-control form-control-alternative" placeholder="+55 (00) 00000 0000" value="" (blur)="blurPhone()" (focus)="focusPhone()" (keydown)="digitOnly($event)" (keyup)="mask($event)">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-11 text-center mb-4">
+                <button class="btn btn-icon btn-success" (click)="check()">
+                  <span class="btn-inner--icon"><i class="ni ni-check-bold"></i></span>
+                  <span class="btn-inner--text">Verificar telefone</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>

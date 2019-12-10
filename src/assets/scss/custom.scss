@@ -48,3 +48,11 @@ $card-container-width: 600px;
         min-height: 100px;
     }
 }
+
+.navbar-vertical.navbar-expand-md::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar-vertical {
+    scrollbar-width: none;
+}
