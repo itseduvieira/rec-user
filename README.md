@@ -1,8 +1,8 @@
-# REC-USER
+# rec-user
 
-Welcome to the **REC-USER** repository!
+Welcome to the **Recorr** repository!
 
-This project is a user-facing application built with the same tech stack as yatta-adm. REC-USER enables customers to manage their recurring plans, view contract details, and securely interact with their subscription options through a streamlined interface.
+Recorr enables customers to manage their recurring plans, view contract details, and securely interact with their subscription options through a streamlined interface.
 
 ![REC-USER App Preview](image3.jpg)
 
